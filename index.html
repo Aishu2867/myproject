@@ -5,23 +5,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #eef2f3;
             padding: 20px;
         }
         .form-container {
             background: #fff;
             padding: 20px;
-            width: 400px;
+            width: 450px;
             margin: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #ccc;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
         }
         .form-container h2 {
             text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
         label {
             display: block;
-            margin-top: 10px;
+            margin-top: 12px;
             font-weight: bold;
         }
         input, select, textarea {
@@ -30,14 +32,16 @@
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 14px;
         }
         .checkbox-group, .radio-group {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 5px;
         }
         .btn-group {
-            margin-top: 15px;
+            margin-top: 20px;
             text-align: center;
         }
         button {
@@ -46,8 +50,10 @@
             border: none;
             background: #4CAF50;
             color: white;
+            font-size: 15px;
             cursor: pointer;
             border-radius: 5px;
+            transition: 0.3s;
         }
         button:hover {
             background: #45a049;
@@ -71,6 +77,12 @@
         <label>Email:</label>
         <input type="email" name="email" placeholder="Enter your email" required>
 
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
         <label>Password:</label>
         <input type="password" name="password" placeholder="Enter your password" required>
 
@@ -85,7 +97,7 @@
         <select name="country" required>
             <option value="">--Select Country--</option>
             <option value="India">India</option>
-            <option value="USA">USA</option>
+            <option value="USA">Sland</option>
             <option value="UK">UK</option>
             <option value="Australia">Australia</option>
         </select>
@@ -95,10 +107,17 @@
             <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
             <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
             <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="Python"> Python</label>
         </div>
 
         <label>Address:</label>
         <textarea name="address" placeholder="Enter your address"></textarea>
+
+        <label>Profile Picture:</label>
+        <input type="file" name="profile" accept="image/*">
+
+        <label>Choose Theme Color:</label>
+        <input type="color" name="black">
 
         <div class="btn-group">
             <button type="submit">Register</button>
@@ -106,6 +125,5 @@
         </div>
     </form>
 </div>
-
 </body>
 </html>
